@@ -15,9 +15,9 @@ func hello(name string) func(w http.ResponseWriter, r *http.Request) {
 		if status(name) == nil {
 			s = "Active"
 		}
-		fmt.Fprintf(w, "<h1>Service "+name+" is "+s+"</h1>"+
-			"<p><a href=\"/start/\">Start</a></p>"+
-			"<p><a href=\"/stop/\">Stop</a></p>")
+		fmt.Fprintf(w, "<h1>"+name+" is "+s+"</h1>"+
+			"<h2><a href=\"/start/\">Start</a></h2>"+
+			"<h2><a href=\"/stop/\">Stop</a></h2>")
 	}
 }
 
